@@ -1,9 +1,10 @@
 version "3.8"
 
 services:
+  # NGINX
   nginx:
     build: ./nginx
-    container_name: nginx_load_balance
+    container_name: nginx
     restart: always
     links:
       - server
@@ -15,3 +16,13 @@ services:
       - "8000:80"
     volumes: 
       - ./nginx:/etc/nginx/conf.d
+
+  # REACT
+  react:
+    container_name: react
+    build: ./client
+    restart: always
+    volumes:
+      - ./client:/usr/src
+    expose: 
+      - 3000
