@@ -1,0 +1,17 @@
+version "3.8"
+
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx_load_balance
+    restart: always
+    links:
+      - server
+      - react
+    depends_on:
+      - server
+      - react
+    ports:
+      - "8000:80"
+    volumes: 
+      - ./nginx:/etc/nginx/conf.d
