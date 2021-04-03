@@ -1,17 +1,17 @@
-version "3.8"
+version: "3.8"
 
-services:
+services: 
   # NGINX
   nginx:
     build: ./nginx
     container_name: nginx
     restart: always
     links:
-      - server
       - react
+      - server
     depends_on:
-      - server
       - react
+      - server
     ports:
       - "8080:80"
     volumes: 
@@ -19,8 +19,8 @@ services:
 
   # REACT
   react:
-    container_name: react
     build: ./client
+    container_name: react
     restart: always
     volumes:
       - ./client:/usr/src
