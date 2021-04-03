@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "tsc -w",
     "dev": "nodemon dist/index.js",
-    "start:dev": "concurrently -k \"yarn:watch\" \"yarn:dev\""
+    "start": "concurrently -k \"yarn:watch\" \"yarn:dev\""
   },
   "keywords": [],
   "author": "",
