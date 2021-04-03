@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+
+# Ignore built ts files
+dist/**/*
+
+# Env
+.env
+
+# OS/IDE
+.vscode
+.DS_Store
+
+# Misc.
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
