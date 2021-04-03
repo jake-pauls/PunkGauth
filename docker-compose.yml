@@ -13,7 +13,7 @@ services:
       - server
       - react
     ports:
-      - "8000:80"
+      - "8080:80"
     volumes: 
       - ./nginx:/etc/nginx/conf.d
 
@@ -26,3 +26,13 @@ services:
       - ./client:/usr/src
     expose: 
       - 3000
+
+  # SERVER
+  server:
+    build: ./server
+    container_name: server
+    restart: always
+    expose:
+      - 5000
+    volumes:
+      - ./server:/usr/src

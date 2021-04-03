@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -b",
     "watch": "tsc -w",
     "dev": "nodemon dist/index.js",
     "start": "concurrently -k \"yarn:watch\" \"yarn:dev\""
