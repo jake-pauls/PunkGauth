@@ -1,9 +1,7 @@
 import "dotenv/config";
 import { Application, Request, Response } from "express";
 import * as jwt from "jsonwebtoken";
-// @ts-ignore
-import { createNewNFT } from "../punkmint/operations";
-
+import { exec } from "child_process";
 
 const posts = [
     {
@@ -11,7 +9,7 @@ const posts = [
       pinnedLocation: 'somewhere.blockchain'
     },
 ]
-  
+ 
 export class Routes {
     public routes(app: Application) : void {        
 
@@ -36,8 +34,23 @@ export class Routes {
         });
 
         // NFT/IPFS Endpoints
-        app.route("/pgapi/createNFT/:resourcePath/:options").get((_req: Request, _res: Response) => {
-            createNewNFT(_req.params.resourcePath, _req.params.options);
+        app.route("/pgapi/createNFT").get((_req: Request, _res: Response) => {
+            const brownie = exec("./run-brownie.sh", (_error, _stdout, _stderr) => {
+                if (_error)
+                    console.log(_error.toString());
+
+                console.log(_stdout.toString());
+            });
+            
+            brownie.on("error", (_error) => {
+                console.log("An error occurred generating the NFT")
+                console.log(_error);
+            });
+        
+            brownie.on("exit", (_code, _signal) => {
+                console.log('NFT process exited with ' + `code ${_code} and signal ${_signal}`); 
+                _res.end("end");
+            });
         });
     }
 }
