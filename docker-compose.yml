@@ -22,6 +22,8 @@ services:
     build: ./client
     container_name: vue
     restart: always
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     volumes:
       - ./client:/usr/src
     expose: 
