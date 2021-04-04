@@ -4,7 +4,7 @@
 <p align="center">
   <font size="8"><strong>PunkGauth</strong></font><br/>
   <i>Submission for Uncommon Hacks 2021</i><br/>
-  <i>🏷️ <strong>Runner Up, Most Technically Impressive</strong>🏷️</i><br/>
+  <i>🏷️ <strong>Runner Up, Most Technically Impressive</strong> 🏷️</i><br/>
   <strong>Created By: Jacob Pauls, Isaac Allen, Jacob Lee, and Karl Zhu</strong></br>
 </p>
 
