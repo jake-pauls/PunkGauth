@@ -38,3 +38,11 @@ services:
       - 5000
     volumes:
       - ./server:/usr/src
+
+  # IPFS
+  ipfs:
+    image: ipfs/go-ipfs
+    container_name: ipfs
+    restart: always
+    ports:
+      - "4001:4001"
