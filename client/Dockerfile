@@ -10,4 +10,5 @@ RUN yarn install
 
 # Copy Remaining Files
 COPY . .
+
 CMD ["yarn", "serve"]
