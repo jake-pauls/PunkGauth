@@ -7,25 +7,25 @@ services:
     container_name: nginx
     restart: always
     links:
-      - react
+      - vue
       - server
     depends_on:
-      - react
+      - vue
       - server
     ports:
-      - "8080:80"
+      - "8000:80"
     volumes: 
       - ./nginx:/etc/nginx/conf.d
 
-  # REACT
-  react:
+  # VUE
+  vue:
     build: ./client
-    container_name: react
+    container_name: vue
     restart: always
     volumes:
       - ./client:/usr/src
     expose: 
-      - 3000
+      - 8080
 
   # SERVER
   server:
