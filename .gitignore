@@ -9,9 +9,10 @@ client/dist/**/*
 # Env
 .env
 
-# OS/IDE
+# OS/IDE/LANG
 .vscode
 .DS_Store
+__pycache__
 
 # Misc.
 lib-cov
@@ -25,3 +26,9 @@ lib-cov
 *.swp
 *.rest
 punkgauth/**/*
+
+# Brownie
+.history
+.hypothesis/
+build/
+reports/
