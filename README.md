@@ -2,8 +2,8 @@
   <img src="./img/punk_gauth.svg" alt="PunkGauth" height="250" />
 </p>
 <p align="center">
-  <font size="5"><strong>PunkGauth</strong></font><br/>
-  <code>Created By: Jacob Pauls, Isaac Allen, Jacob Lee, and Karl Zhu</code></br>
+  <font size="8"><strong>PunkGauth</strong></font><br/>
+  <strong>Created By: Jacob Pauls, Isaac Allen, Jacob Lee, and Karl Zhu</strong></br>
 </p>
 
 ---
