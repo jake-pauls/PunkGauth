@@ -7,13 +7,8 @@ const posts = [
       username: 'Isaac',
       pinnedLocation: 'somewhere.blockchain'
     },
-    {
-      username: 'suckMcSucky',
-      pinnedLocation: 'idk'
-    }
-  ]
+]
   
-
 export class Routes {
     public routes(app: Application) : void {        
         app.route('/pgapi/ping').get((_req: Request, _res: Response) => {
@@ -22,11 +17,12 @@ export class Routes {
             })
         });
 
-        app.route('/posts').get((_req: Request, _res: Response) => {
+        app.route('/pgapi/posts').get((_req: Request, _res: Response) => {
+            console.log('posts');
             _res.status(200).send(_res.json(posts));
         });
 
-        app.route('/login').post((_req: Request, _res: Response) => {
+        app.route('/pgapi/jwt').post((_req: Request, _res: Response) => {
             //Auth User
             const username = _req.body.username;
             const user = { name: username };
