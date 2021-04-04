@@ -3,7 +3,7 @@ import { Counter } from "./components/Counter";
 const App = () => {
   return (
     <div className='App'>
-      <h1>Test</h1>
+      <h1>PunkGauth</h1>
       <Counter>
         {({ count, setCount }) => (
           <div>

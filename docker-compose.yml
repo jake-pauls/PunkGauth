@@ -1,0 +1,38 @@
+version: "3.8"
+
+services: 
+  # NGINX
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    links:
+      - react
+      - server
+    depends_on:
+      - react
+      - server
+    ports:
+      - "8080:80"
+    volumes: 
+      - ./nginx:/etc/nginx/conf.d
+
+  # REACT
+  react:
+    build: ./client
+    container_name: react
+    restart: always
+    volumes:
+      - ./client:/usr/src
+    expose: 
+      - 3000
+
+  # SERVER
+  server:
+    build: ./server
+    container_name: server
+    restart: always
+    expose:
+      - 5000
+    volumes:
+      - ./server:/usr/src

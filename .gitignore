@@ -2,6 +2,7 @@
 node_modules
 
 # Ignore built ts files
+server/dist/**/*
 dist/**/*
 
 # Env
