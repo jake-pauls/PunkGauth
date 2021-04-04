@@ -1,16 +1,58 @@
 <template>
   <div class="hello">
-     <b-img v-bind="mainProps" src="./GirlDrum.jpg" fluid alt="Responsive image" class="homeImg"></b-img>
-     <h1 class="logoTL">Punk Gauth</h1>
-     <h1 class="header"> <span class="logo">Punk Gauth</span> <span class="description">Market!</span></h1>
-     <b-nav pills class="nav">
-       <b-nav-item id="btn2">Marketplace</b-nav-item>
-       <b-nav-item id="btn3">Library</b-nav-item>
-       <div vs>
-      <button class="btn btn-primary" @click="$router.push('marketplace')">Learn More</button>
-      <button>Start Browsing</button>
-       </div>
-     </b-nav>
+<div id="header">
+
+    <div id="c1">
+      <h1 class="logoTL">Punk Gauth</h1>
+    </div>
+
+    <div id="c2">
+      <b-nav pills class="nav">
+        <div @click="$router.push('marketplace')" id="btn"><b-button>Browse</b-button></div>
+        <div id="btn">Marketplace</div>
+        <div id="btn">Library</div>
+      </b-nav>
+    </div>
+
+</div>
+
+  <div class="hero">
+    <div class="herotextcontainer">
+      <h1 class="herotext" v-bind="mainProps"> <span class="logo">Punk Gauth</span> <span class="description"> Marketplace</span></h1>
+      <div class="buttons">
+        <button class="button">Learn More</button>
+        <button class="button rightbutton"  @click="$router.push('marketplace')">Start Browsing</button>
+      </div>
+    </div>
+    <div class="gradient"></div>
+
+  <div class="sectionone">
+    <div class="sectiononecontent">
+      <div class="sectiontitle">A fair pay for your art.</div>
+      <b-img v-bind="mainProps" src="./Blocks.svg" fluid alt="Responsive image" class="sectionimage"></b-img>
+      <div class="sectiondescription">Punk Gauth enables artists to dynamically establish market share of their work through cryptocurrency authentication based on Ethereum.</div>
+    </div>
+  </div>
+
+  <div class="sectiontwo">
+    <div class="sectiontwocontent">
+      <div class="sectiontwotext">
+        <div class="sectiontwotitle">A fair pay for your art.</div>
+        <div class="sectiontwodescription">NFTs (Non fungible tokens) provide a marketplace for assets such as digital art, game items, concert tickets, real estate, and more.
+        <br><br>
+        These new tokens allow digital artists to monetize their work by providing proof of ownership, regardless of how many people download and use the images.</div>
+      </div>
+
+      <b-img v-bind="mainProps" src="./Gift.svg" fluid alt="Responsive image" class="sectiontwoimage"></b-img>
+
+      
+    </div>
+  </div>
+
+  
+
+
+  </div>
 
   </div>
 </template>
@@ -34,80 +76,78 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/* Header Styling Start */
+#header{
+    margin-top: 10px;
+    overflow:auto;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+}
+#c1{
+   float:left;
+   margin-left: 40px;
+}
+#c2{
+    float:right;
+    margin-top: 16px;
+    margin-right: 40px;
+}
+.nav{
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 600;
+  color: #F8F8F8;
+}
+#btn{
+  margin-left: 50px;
+  z-index: 2;
+}
 .logoTL{
-  position: absolute;
 width: 134px;
 height: 49px;
-left: 40px;
-top: 30px;
-
 font-family: Digestive;
 font-style: normal;
 font-weight: normal;
 font-size: 60px;
-line-height: 49px;
-/* identical to box height */
-
-
-/* BG White */
-
 color: #F8F8F8;
-
 }
-.nav{
-  /* Navigation Bar */
+/* Header Ends Here */
 
-
-/* Auto Layout */
-
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-align-items: center;
-padding: 0px;
-position: absolute;
-width: 500px;
-height: 44px;
-left: 900px;
-top: 30px;
-
+.hero {
+  width: 100vw;
+  height:952px;
+  background-image: url("../../public/GirlDrum.jpg");
+  background-size: cover;
+  background-position: 30%;
 }
-.navText{
-  font-family: "Poppins";
-font-style: normal;
-font-weight: normal;
-font-size: 17px;
-line-height: 81%;
-/* identical to box height, or 14px */
-
-text-align: center;
-
-/* Black */
-
-color: #1F1F1F;
-
-  
+.gradient{
+  position: absolute;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  width: 100%;
+  height: 536px;
+  top: 417px;
+  z-index: 0;
 }
-
-.header{
-  /* Main Header Introduction */
-
-
-position: absolute;
-width: 931px;
-height: 278px;
-left: 255px;
-top: 298px;
-line-height: 125%;
-text-align: center;
-color: #FFF964;
+.herotextcontainer{
+  padding: 270px 0;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+.herotext{
+  color: #FFF964;
+  width: 70%;
+  margin: 0 auto;
 }
 .logo {
-font-family: "Digestive";
-font-style: normal;
-font-weight: 400;
-font-size: 90px;
-line-height: 112.5px;
+  font-family: "Digestive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 112.5px;
 }
 .description{
   font-family: "Poppins";
@@ -116,29 +156,108 @@ line-height: 112.5px;
   font-size: 70px; 
   line-height: 87.5px; 
 }
-button{
+.buttons{
+  margin-top: 30px;
+}
+.button{
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 15px 30px;
+  color: #1F1F1F;
+  background-color: #41F09C;
+  border-radius: 100px;
+  border: none;
+}
+.rightbutton{
+  background-color: #FFF964;
+  margin-left: 20px;
+}
+/* Hero Ends Here */
 
-  justify-content: center;
+.ellipseyellow{
+  z-index: 10;
+  position: absolute;
+  top: 730px;
+  left: -430px;
 }
-h3 {
-  margin: 40px 0 0;
+.ellipsered{
+  z-index: 10;
+  position: absolute;
+  top: 730px;
+  left: -430px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.starteal{
+  z-index: 10;
+  position: absolute;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+
+.sectionone{
+  position: absolute;
+  top: 952px;
+  width: 100%;
+  height: 1000px;
+  background: white;
+  z-index: 10;
 }
-a {
-  color: #42b983;
+.sectiononecontent{
+  text-align: center;
+  z-index: 11;
 }
-.homeImg {
-   transform: scaleX(-1);
-   position: absolute;
-width: 100%;
-top: -720px;
-border-radius: 0px;
+.sectiontitle{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 168px;
+  margin-bottom: -124px;
 }
+.sectionimage{
+  width: 928px;
+  height: 696px;
+}
+.sectiondescription{
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  width: 631px;
+  margin: 0 auto;
+  margin-top: -80px;
+}
+
+.sectiontwo{
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 2252px;
+  height: 800px;
+  overflow: hidden;
+}
+.sectiontwoimage{
+  position: absolute;
+  top:  0px;
+  right: -20%;
+  width: 928px;
+  height: 696px;
+}
+.sectiontwotext{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+.sectiontwotitle{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+.sectiontwotext{
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  width: 531px;
+}
+
 </style>

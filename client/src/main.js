@@ -6,8 +6,10 @@ import marketplace from './components/marketplace.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './assets/app.scss'
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
+
 Vue.config.productionTip = false
 
 const routes = [

@@ -8,7 +8,7 @@
 
     <div id="c2">
       <b-nav pills class="nav">
-        <div id="btn">Browse</div>
+        <div @click="$router.push('marketplace')" id="btn"><b-button>Browse</b-button></div>
         <div id="btn">Marketplace</div>
         <div id="btn">Library</div>
       </b-nav>
@@ -20,8 +20,8 @@
     <div class="herotextcontainer">
       <h1 class="herotext" v-bind="mainProps"> <span class="logo">Punk Gauth</span> <span class="description">revolutionizes the music industry with the power of NFTs.</span></h1>
       <div class="buttons">
-        <button class="button" @click="$router.push('marketplace')">Learn More</button>
-        <button class="button rightbutton">Start Browsing</button>
+        <button class="button">Learn More</button>
+        <button class="button rightbutton"  @click="$router.push('marketplace')">Start Browsing</button>
       </div>
     </div>
     <div class="gradient"></div>
@@ -102,6 +102,7 @@ export default {
 }
 #btn{
   margin-left: 50px;
+  z-index: 4;
 }
 .logoTL{
 width: 134px;
