@@ -1,8 +1,10 @@
 # Dependencies
 node_modules
 
-# Ignore built ts files
+# Ignore built ts and vue files
 dist/**/*
+server/dist/**/*
+client/dist/**/*
 
 # Env
 .env
