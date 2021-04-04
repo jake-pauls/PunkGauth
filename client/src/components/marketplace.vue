@@ -2,19 +2,16 @@
   <div class="hello">
      <b-img v-bind="mainProps" src="./GirlDrum.jpg" fluid alt="Responsive image" class="homeImg"></b-img>
      <h1 class="logoTL">Punk Gauth</h1>
+     <h1 class="header"> <span class="logo">Punk Gauth</span> <span class="description">Market!</span></h1>
      <b-nav pills class="nav">
        <b-nav-item id="btn2">Marketplace</b-nav-item>
        <b-nav-item id="btn3">Library</b-nav-item>
-       </b-nav>
-       <div style="position: relative">
-       <div class="d-flex justify-content-center">
-         <h1 class="header" v-bind="mainProps"> <span class="logo">Punk Gauth</span> <span class="description">revolutionizes the music industry with the power of NFTs.</span></h1>
-         <div style="position: absolute" class="buttons">
+       <div vs>
       <button class="btn btn-primary" @click="$router.push('marketplace')">Learn More</button>
       <button>Start Browsing</button>
-      </div>
        </div>
-     </div>
+     </b-nav>
+
   </div>
 </template>
 
@@ -57,9 +54,6 @@ line-height: 49px;
 color: #F8F8F8;
 
 }
-.btn{
-  top:500px;
-}
 .nav{
   /* Navigation Bar */
 
@@ -97,9 +91,13 @@ color: #1F1F1F;
 
 .header{
   /* Main Header Introduction */
+
+
 position: absolute;
-width: 55%;
-margin-top: 20%;
+width: 931px;
+height: 278px;
+left: 255px;
+top: 298px;
 line-height: 125%;
 text-align: center;
 color: #FFF964;
@@ -142,9 +140,5 @@ a {
 width: 100%;
 top: -720px;
 border-radius: 0px;
-}
-.buttons {
-  margin-top: 50%;
-  margin-left: 50%;
 }
 </style>
