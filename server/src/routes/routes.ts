@@ -8,7 +8,7 @@ const posts = [
       pinnedLocation: 'somewhere.blockchain'
     },
     {
-      useername: 'suckMcSucky',
+      username: 'suckMcSucky',
       pinnedLocation: 'idk'
     }
   ]
@@ -16,22 +16,22 @@ const posts = [
 
 export class Routes {
     public routes(app: Application) : void {        
-        app.route('/pgapi/ping').get((req: Request, res: Response) => {
-            res.status(200).send({
+        app.route('/pgapi/ping').get((_req: Request, _res: Response) => {
+            _res.status(200).send({
                 ping: "pong"
             })
         });
 
-        app.route('/posts').get((req: Request, res: Response) => {
-            res.status(200).send(res.json(posts));
+        app.route('/posts').get((_req: Request, _res: Response) => {
+            _res.status(200).send(_res.json(posts));
         });
 
-        app.route('/login').post((req: Request, res: Response) => {
+        app.route('/login').post((_req: Request, _res: Response) => {
             //Auth User
-            const username = req.body.username;
+            const username = _req.body.username;
             const user = { name: username };
             const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET as string);
-            res.json({ accessToken: accessToken })
+            _res.json({ accessToken: accessToken })
         });
     }
 }
