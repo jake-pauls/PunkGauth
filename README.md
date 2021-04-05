@@ -44,7 +44,7 @@ We are proud that we managed to mint a NFT using Python, and that we were able t
 ## What's next for PunkGauth?
 First and foremost, music is just the tip of the iceberg. There are a plethora of industries that could benefit from the unique nature of NFTs and the democratic economy associated with blockchain. As well, exposing a PunkGauth API as a service is also on the horizon to match this overarching goal of democratizing and securing rights to all digital assets and their revenue.
 
-Finally, imporving and further nurturing a community and marketplace where artists can exchange their NFT authenticated products is a key part of our vision. If we didn't sound crazy enough, we're also looking at making a mobile version of our application, thus making blockchain assets accessible from anywhere. 
+Finally, improving and further nurturing a community and marketplace where artists can exchange their NFT authenticated products is a key part of our vision. If we didn't sound crazy enough, we're also looking at making a mobile version of our application, thus making blockchain assets accessible from anywhere. 
 
 ---
 
