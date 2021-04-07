@@ -48,4 +48,7 @@ Finally, improving and further nurturing a community and marketplace where artis
 
 ---
 
+Try out our final [Prototype](https://framer.com/share/PunkGauth--rrqTFouie3ZdzuJypCWE/vAwUngL_U#vAwUngL_U).
+Or, view wireframes [here](https://www.figma.com/file/byQphfRVNeiDyKifJyCtm8/PunkGauth?node-id=0%3A1).
+
 Made  with 💛 in 2021 
